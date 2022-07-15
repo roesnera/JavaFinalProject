@@ -49,7 +49,7 @@
  
  2. Test the program to verify it works as expected:
   * Create a new student.
-  * Enrroll the student to few courses.
+  * Enroll the student to few courses.
   * Show the students and courses summary and verify that data is correct.
   
 
