@@ -18,11 +18,10 @@ public class PrinterHelper
         System.out.println( "| Select 1 option:              |" );
         System.out.println( "| . 1 Register Student          |" );
         System.out.println( "| . 2 Find Student              |" );
-        System.out.println( "| . 3 Grade Student             |" );
-        System.out.println( "| . 4 Enroll Student to Course  |" );
-        System.out.println( "| . 5 Show Students Summary     |" );
-        System.out.println( "| . 6 Show Courses Summary      |" );
-        System.out.println( "| . 7 Exit                      |" );
+        System.out.println( "| . 3 Enroll Student to Course  |" );
+        System.out.println( "| . 4 Show Students Summary     |" );
+        System.out.println( "| . 5 Show Courses Summary      |" );
+        System.out.println( "| . 6 Exit                      |" );
         System.out.println( "|-------------------------------|" );
     }
 

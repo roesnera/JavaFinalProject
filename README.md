@@ -23,34 +23,17 @@
     {
         //TODO implement this method
     }
-    
-    public boolean isCourseApproved( String courseCode )
-    {
-        //TODO implement this method
-        return false;
-    }
 
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
         return false;
     }
-    @Override
-    public List<Course> getApprovedCourses()
-    {
-        //TODO implement this method
-        return null;
-    }
    ```
    
    2. Open the *StudentService* class (`src/com/generation/service/StudentService.java`) and implement the following methods:
    
    ```java
-       public boolean isSubscribed( String studentId )
-       {
-           //TODO implement this method
-           return false;
-       }
 
        public void showSummary()
        {
@@ -67,7 +50,6 @@
  2. Test the program to verify it works as expected:
   * Create a new student.
   * Enrroll the student to few courses.
-  * Grade the student.
   * Show the students and courses summary and verify that data is correct.
   
 

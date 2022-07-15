@@ -31,18 +31,6 @@ public class Student
         approvedCourses.put( course.getCode(), course );
     }
 
-    public boolean isCourseApproved( String courseCode )
-    {
-        //TODO implement this method
-        return false;
-    }
-
-    // CHALLENGE IMPLEMENTATION: Read README.md to find instructions on how to solve. 
-    public List<Course> findPassedCourses( Course course )
-    {
-        //TODO implement this method
-        return null;
-    }
 
     public boolean isAttendingCourse( String courseCode )
     {
@@ -54,13 +42,6 @@ public class Student
     public double getAverage()
     {
         return average;
-    }
-
-    @Override
-    public List<Course> getApprovedCourses()
-    {
-        //TODO implement this method
-        return null;
     }
 
     @Override

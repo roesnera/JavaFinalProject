@@ -24,12 +24,6 @@ public class StudentService
         return null;
     }
 
-    public boolean isSubscribed( String studentId )
-    {
-        //TODO implement this method
-        return false;
-    }
-
     public void showSummary()
     {
         //TODO implement

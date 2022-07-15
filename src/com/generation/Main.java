@@ -32,20 +32,17 @@ public class Main
                     findStudent( studentService, scanner );
                     break;
                 case 3:
-                    gradeStudent( studentService, scanner );
-                    break;
-                case 4:
                     enrollStudentToCourse( studentService, courseService, scanner );
                     break;
-                case 5:
+                case 4:
                     showStudentsSummary( studentService, scanner );
                     break;
-                case 6:
+                case 5:
                     showCoursesSummary( courseService, scanner );
                     break;
             }
         }
-        while ( option != 7 );
+        while ( option != 6 );
     }
 
     private static void enrollStudentToCourse( StudentService studentService, CourseService courseService,
@@ -83,11 +80,6 @@ public class Main
     private static void showStudentsSummary( StudentService studentService, Scanner scanner )
     {
         studentService.showSummary();
-    }
-
-    private static void gradeStudent( StudentService studentService, Scanner scanner )
-    {
-
     }
 
     private static void findStudent( StudentService studentService, Scanner scanner )
