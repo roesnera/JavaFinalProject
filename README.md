@@ -5,15 +5,15 @@
 
  <br/>
  <br/>
- It's time to see how much you learned about Java and Object Oriented Programming.
+ It's time to see how much you learned about Java and Object-Oriented Programming.
  
  ## Part 1: Understanding the StudentGen project
  1. Download the source code and import the project using IntelliJ Idea or any other IDE you prefer.
- 2. Understand the project stucture:
+ 2. Understand the project structure:
  * Packages
  * Classes
  * Functionality
- 3. Run and test the project to get a deeper undertanding of how it works (remember the persistence mindset!).
+ 3. Run and test the project to get a deeper understanding of how it works (remember the persistence mindset!).
  
   ## Part 2: Implementing the Student and StudentService missing features
   1. Open the *Student* class (`src/com/generation/model/Student.java`) and implement the following methods:
@@ -45,17 +45,16 @@
 
   ## Part 3: Implementing the missing main method features
  
- 1. Implement the method to *gradeStudent( StudentService studentService, Scanner scanner )* in `src/com/generation/Main.java ` to have a fully functional program.
  
- 2. Test the program to verify it works as expected:
+ 1. Test the program to verify it works as expected:
   * Create a new student.
-  * Enroll the student to few courses.
+  * Enroll the student to a few courses.
   * Show the students and courses summary and verify that data is correct.
   
 
   ## Part 4: Handling exceptions
   1. Register a new user providing a wrong date format.
-  2. Modify the createStudentMenu so it handles correctly the exception when a wrong date format is inserted by the user.
+  2. Modify the createStudentMenu so that it handles correctly the exception when a wrong date format is inserted by the user.
   3. Catch the exception and show a proper message to the user.
   
  ## Part 5: Writing Unit Tests
