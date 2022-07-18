@@ -24,11 +24,28 @@ public class StudentService
         return null;
     }
 
-    public void showSummary()
-    {
-        //TODO implement
+    @Override
+    public String toString(){
+        return "studentService{" +
+                "students=" + students +
+                "}";
     }
+    public void showSummary() {
 
+        System.out.println("Available Courses:");
+        for ( String key : courses.keySet() ) {
+            Course course = courses.get( key );
+            System.out.println(course);
+        }
+        System.out.println("Enrolled Students");
+        for ( String key : enrolledStudents.keySet() ) {
+            List<Student> students = enrolledStudents.get(key);
+            System.out.println( "Students on Course " + key + ": ");
+            for (Student student : students) {
+                System.out.println( student );
+            }
+        }
+    }
     public void enrollToCourse( String studentId, Course course )
     {
         if ( students.containsKey( studentId ) )
