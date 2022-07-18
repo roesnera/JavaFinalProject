@@ -75,7 +75,6 @@ public class CourseService
         }
     }
 
-
     public void showSummary()
     {
         System.out.println( "Available Courses:" );
@@ -85,6 +84,7 @@ public class CourseService
             System.out.println( course );
         }
         System.out.println( "Enrolled Students" );
+
         for ( String key : enrolledStudents.keySet() )
         {
             List<Student> students = enrolledStudents.get( key );
