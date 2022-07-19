@@ -24,6 +24,8 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        courses.add( course );
+
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,7 +37,18 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
-        return false;
+ //      for(Course course : courses) {
+//           if(course.getCode() == courseCode){
+//               return true;
+//           }
+//       }
+//       return false;
+            for( int i = 0; i < courses.size(); i++){
+                if(courses.get(i).getCode() == courseCode){
+                    return true;
+                }
+            }
+            return false;
     }
 
     @Override
