@@ -23,6 +23,12 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
+        if(!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        }
+        else{
+            System.out.println("Student already enrolled in course.");
+        }
         //TODO implement this method
     }
 
@@ -32,9 +38,14 @@ public class Student
     }
 
 
+    // returns true if this student is attending the course specified by the argument courseCode
     public boolean isAttendingCourse( String courseCode )
     {
-        //TODO implement this method
+        for(Course c : courses){
+            if(c.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -47,6 +58,6 @@ public class Student
     @Override
     public String toString()
     {
-        return "Student {" + super.toString() + "}";
+        return "Student {" + super.toString() + ", "+courses.toString()+"}";
     }
 }

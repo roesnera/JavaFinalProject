@@ -26,6 +26,13 @@ public class StudentService
 
     public void showSummary()
     {
+        System.out.println("Students: ");
+        for(String key: students.keySet()){
+            Student stud = students.get(key);
+            System.out.println(stud.toString());
+        }
+
+
         //TODO implement
     }
 
