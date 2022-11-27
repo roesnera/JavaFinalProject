@@ -6,4 +6,5 @@ public interface Evaluation
 {
     double getAverage();
 
+
 }
