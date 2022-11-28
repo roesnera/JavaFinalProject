@@ -55,7 +55,7 @@
 
   ## Part 4: Handling exceptions
   1. Register a new user providing a wrong date format.
-  2. Modify the createStudentMenu so that it handles correctly the exception when a wrong date format is inserted by the user.
+  2. Modify the createStudentMenu method of the PrinterHelper class so that it handles correctly the exception when a wrong date format is inserted by the user.
   3. Catch the exception and show a proper message to the user.
   
  ## Challenge Yourself
