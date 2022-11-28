@@ -40,7 +40,18 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
+
         Date birthDate = formatter.parse( scanner.next());
+
+        // i think i'm suppose to use try catch, but not sure how..
+//        try {
+//            if (birthDate != ParseException) {
+//
+//            }
+//        } catch (ParseException e) {
+//            System.out.println("Wrong date format");
+//        }
+
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
         System.out.println( "Student Successfully Registered! " );
