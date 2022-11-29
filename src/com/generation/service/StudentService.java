@@ -27,6 +27,8 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+
+        System.out.println(students);
     }
 
     public void enrollToCourse( String studentId, Course course )

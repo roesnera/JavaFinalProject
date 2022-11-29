@@ -37,8 +37,8 @@ public class PrinterHelper
         String id = scanner.next();
         System.out.println( "| Enter student email:                |" );
         String email = scanner.next();
-        System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
-        DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
+        System.out.println( "| Enter student birth date(MM/DD/YYYY)|" );
+        DateFormat formatter = new SimpleDateFormat( "MM/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
         Date birthDate = formatter.parse( scanner.next());
         System.out.println( "|-------------------------------------|" );

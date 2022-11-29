@@ -16,6 +16,7 @@ public class Student
 
     private final Map<String, Course> approvedCourses = new HashMap<>();
 
+
     public Student( String id, String name, String email, Date birthDate )
     {
         super( id, name, email, birthDate );
@@ -24,6 +25,10 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+
+        courses.add( course );
+
+
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,7 +40,14 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
-        return false;
+        if(courseCode == courseCode) {
+            return true;
+        } else {
+            return false;
+        }
+
+
+
     }
 
     @Override
