@@ -2,6 +2,7 @@ package com.generation.service;
 
 import com.generation.model.Course;
 import com.generation.model.Student;
+import com.generation.service.CourseService;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +10,7 @@ import java.util.Map;
 public class StudentService
 {
     private final Map<String, Student> students = new HashMap<>();
+    CourseService courseService = new CourseService();
 
     public void subscribeStudent( Student student )
     {
@@ -26,6 +28,7 @@ public class StudentService
 
     public void showSummary()
     {
+        courseService.showSummary();
         //TODO implement
     }
 

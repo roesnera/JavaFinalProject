@@ -40,7 +40,12 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
+        try {
         Date birthDate = formatter.parse( scanner.next());
+        } catch (Exception e) {
+            Date birthDate = formatter.parse("00/00/0000");
+            System.out.println("That date wasn't formatted properly");
+        }
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
         System.out.println( "Student Successfully Registered! " );

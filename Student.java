@@ -23,6 +23,7 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
+        courses.push(course);
         //TODO implement this method
     }
 
@@ -35,6 +36,9 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+
+        //Unsure how to define, method not called elsewhere in program
+        
         return false;
     }
 
