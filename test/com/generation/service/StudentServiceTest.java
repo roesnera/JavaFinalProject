@@ -27,6 +27,6 @@ class StudentServiceTest {
 
     @org.junit.jupiter.api.Test
     void enrollToCourse() {
-      // Student s4 = ss.enrollToCourse();
+
     }
 }
