@@ -1,5 +1,7 @@
 package com.generation.model;
 
+import com.generation.service.StudentService;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -23,7 +25,15 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO implement this method
+        courses.add(course);
+    }
+
+    public String getCourses() {
+        ArrayList<String> enrolledCourses = new ArrayList<String>();
+        for (Course course : courses) {
+            enrolledCourses.add(course.getCode());
+        }
+        return enrolledCourses.toString();
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,6 +45,11 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        for (Course course : courses) {
+            if (course.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         return false;
     }
 
