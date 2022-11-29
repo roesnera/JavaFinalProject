@@ -8,34 +8,43 @@ import java.util.Map;
 
 public class Student
     extends Person
-    implements Evaluation
-{
+    implements Evaluation {
     private double average;
 
     private final List<Course> courses = new ArrayList<>();
 
     private final Map<String, Course> approvedCourses = new HashMap<>();
 
-    public Student( String id, String name, String email, Date birthDate )
-    {
-        super( id, name, email, birthDate );
+    public Student(String id, String name, String email, Date birthDate) {
+        super(id, name, email, birthDate);
     }
 
-    public void enrollToCourse( Course course )
+    public void enrollToCourse(Course course) {
+        //TODO implement this method
+        {
+            if (!isAttendingCourse(course.getCode())) {
+                courses.add(course);
+            }
+        }
+    }
+
+    public void registerApprovedCourse(Course course) {
+        approvedCourses.put(course.getCode(), course);
+    }
+
+
+    public boolean isAttendingCourse(String courseCode)
+    //return true if course code corresponds to a course in
+    //--course.java
+    //need a loop?? enhanced for loop
+
     {
         //TODO implement this method
+for(Course content : courses){
+    if(content.getCode().equals(courseCode)) {
+        return true;
     }
-
-    public void registerApprovedCourse( Course course )
-    {
-        approvedCourses.put( course.getCode(), course );
-    }
-
-
-    public boolean isAttendingCourse( String courseCode )
-    {
-        //TODO implement this method
-        return false;
+}        return false;
     }
 
     @Override

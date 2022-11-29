@@ -75,7 +75,7 @@ public class CourseService
         }
     }
 
-
+//show summary of students enrolled in a course
     public void showSummary()
     {
         System.out.println( "Available Courses:" );

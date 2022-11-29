@@ -4,6 +4,7 @@ import com.generation.model.Course;
 import com.generation.model.Student;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
@@ -25,10 +26,30 @@ public class StudentService
     }
 
     public void showSummary()
+            //find all usages of showSummary method to see where
+            //--it's being used  -- right-click on showSummary, find usages
+            //needs to do the same thing as the courseService class -- EXAMPLE BELOW
+//show summary of enrolled students
+    //................................................
     {
-        //TODO implement
-    }
-
+        System.out.println("Student Roster:");
+        for (String key : students.keySet()) {
+            Student student = students.get(key);
+            System.out.println(student);
+        }
+//this part not working
+                System.out.println( "Enrolled to Course" );
+//                for ( String key : students.keySet() )
+//                {
+//                    List<Course> courses = enrollToCourse.get( key );
+//                    System.out.println( "Enrolled in course " + key + ": " );
+//                    for ( Course course : courses )
+//                    {
+//                        System.out.println( course );
+//                    }
+//                }
+            }
+// .................................................
     public void enrollToCourse( String studentId, Course course )
     {
         if ( students.containsKey( studentId ) )
