@@ -105,6 +105,5 @@ public class Main
         studentService.subscribeStudent( student );
     }
 
-    Student bob = new Student("bob");
-    bob.
+
 }
