@@ -25,7 +25,6 @@ public class Student
     public void enrollToCourse(Course course )
     {
         //TODO implement this method
-        //this.courses.add(course);
         registerApprovedCourse(course);
     }
 
@@ -38,18 +37,13 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
-
-        //Use for loop to check if the courses arraylist's course code matches to the parameter course.
-        for(String courseId : approvedCourses.keySet())
-        for(int i = 0; i < courses.size(); i++) {
-            if(courses.get(i).getCode().equals(courseCode) ) {
-                System.out.println(courses.get(i).getCode());
-                return true;
-            }
+        if(approvedCourses.containsKey(courseCode)) {
+            return true;
+        }
+        else {
+            return false;
         }
 
-        //If it does not match, return false
-        return false;
     }
 
     @Override
