@@ -3,7 +3,9 @@ package com.generation.service;
 import com.generation.model.Course;
 import com.generation.model.Student;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
@@ -24,9 +26,27 @@ public class StudentService
         return null;
     }
 
-    public void showSummary()
-    {
+    public void showSummary() {
         //TODO implement
+        System.out.println("Students Summary:");
+
+        for (Student student: students.values() ){
+            System.out.println(student.toString());
+        }
+//        Another way of doing, but creating unneccesary objects, method calls and also using the slow arraylist
+//        for ( String key : students.keySet() )
+//        {
+//            Student student = students.get(key);
+//            List<Course> courses = student.getCourses();
+//            ArrayList<String> summary = new ArrayList<>();
+//            summary.add(student.toString());
+//            for (Course course:courses) {
+//                //System.out.print(course.toString()+"  ");
+//                summary.add(course.toString());
+//            }
+//            System.out.println(summary.toString());
+//
+//        }
     }
 
     public void enrollToCourse( String studentId, Course course )
@@ -37,5 +57,8 @@ public class StudentService
         }
     }
 
+    public Map<String, Student> getStudents() {
+        return students;
+    }
 
 }
