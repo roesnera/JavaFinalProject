@@ -21,9 +21,21 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
+
+    public void enrollToCourse(Course course )
     {
         //TODO implement this method
+        if(!(isAttendingCourse(course.getCode()))) {
+            //Initially I did correctly. I overthought add all registered courses to approvedCourses.
+            //Modified back again
+            courses.add(course);
+
+            //Used for isAttendingCourse
+            registerApprovedCourse(course);
+        }
+        else {
+            System.out.println("The student has been enrolled");
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,7 +47,13 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
-        return false;
+        if(approvedCourses.containsKey(courseCode)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+
     }
 
     @Override
