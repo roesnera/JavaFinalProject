@@ -6,7 +6,9 @@ import com.generation.service.CourseService;
 import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
+import java.sql.SQLOutput;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -104,4 +106,17 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+
+    //trying to run this?:
+    public boolean isAttendingCourse( String courseCode ){
+        System.out.println(" This student is attending " + courseCode);
+return true;
+    }
+    // attempting to make a new student here:
+
+ Student testStudent = new Student("5", "beau", "golden@email.com", null);
+//spent 30 minutes trying to figure out how to get my date to work and decided to try null just to move along
+    //well, it runs but student beau with id 5 is not turning up
+    // maybe you mean create a new student in the text below? i did that already and it did work!
+    // will i be good at this someday?
 }

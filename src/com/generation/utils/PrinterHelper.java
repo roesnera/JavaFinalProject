@@ -38,14 +38,44 @@ public class PrinterHelper
         System.out.println( "| Enter student email:                |" );
         String email = scanner.next();
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
-        DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
+        DateFormat formatter = new SimpleDateFormat( "MM/dd/yyyy");
+
+// changed "mm" in date to "MM"
+
         //TODO validate date format and catch exception to avoid crash
-        Date birthDate = formatter.parse( scanner.next());
+        //just putting this here in case i'm supposed to use something like this
+        //     if ( student == null )
+        //    {
+         //   System.out.println( "Invalid Student ID" );
+        //    return;
+        //     }
+        // or is it a try, catch? or is it use a different date util or formatter?
+
+
+//from adam's :
+        Date birthDate = null;
+        boolean validDate = false;
+
+        while (!validDate) {
+            System.out.println("Enter student birth date (mm/dd/yyyy");
+            try {
+                birthDate = formatter.parse(scanner.next());
+                validDate = true;
+            } catch (ParseException e) {
+                System.out.println("Invalid date!");
+
+            }
+
+        }
+
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
         System.out.println( "Student Successfully Registered! " );
         System.out.println(student);
         return student;
     }
+
+
+
 
 }
