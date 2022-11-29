@@ -4,14 +4,20 @@ import com.generation.model.Course;
 import com.generation.model.Student;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
 {
+
+
     private final Map<String, Student> students = new HashMap<>();
+    private final Map<String, Course> courses = new HashMap<>();
+
 
     public void subscribeStudent( Student student )
     {
+
         students.put( student.getId(), student );
     }
 
@@ -26,7 +32,13 @@ public class StudentService
 
     public void showSummary()
     {
-        //TODO implement
+        //***********TODO implement
+        System.out.println( "Summary of Students:" );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            System.out.println( student.toString() );
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )
