@@ -21,9 +21,10 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
+    public void enrollToCourse(Course course)
     {
         //TODO implement this method
+        Course.add
     }
 
     public void registerApprovedCourse( Course course )
@@ -34,8 +35,11 @@ public class Student
 
     public boolean isAttendingCourse( String courseCode )
     {
-        //TODO implement this method
-        return false;
+        if (courseCode == courseCode){
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override

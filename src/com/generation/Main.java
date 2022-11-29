@@ -104,4 +104,7 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+
+    Student bob = new Student("bob");
+    bob.
 }
