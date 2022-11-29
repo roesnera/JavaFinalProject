@@ -15,11 +15,11 @@ public class StudentService
         students.put( student.getId(), student );
     }
 
-    public Student findStudent( String studentId )
+    public Student findStudent(String studentId)
     {
-        if ( students.containsKey( studentId ) )
+        if ( students.containsKey(studentId))
         {
-            return students.get( studentId );
+            return students.get(studentId);
         }
         return null;
     }
@@ -27,6 +27,12 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        System.out.println("Students: ");
+        for(String key: students.keySet()){
+            Student stud = students.get(key);
+            System.out.println(stud.toString());
+        }
+
     }
 
     public void enrollToCourse( String studentId, Course course )
