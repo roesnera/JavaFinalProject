@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+import java.util.Arrays;
 public class Student
     extends Person
     implements Evaluation
@@ -21,9 +21,8 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
-    {
-        //TODO implement this method
+    public void enrollToCourse( Course course ){
+        courses.add(course);
     }
 
     public void registerApprovedCourse( Course course )
@@ -32,10 +31,13 @@ public class Student
     }
 
 
-    public boolean isAttendingCourse( String courseCode )
-    {
-        //TODO implement this method
-        return false;
+    public boolean isAttendingCourse( String courseCode ) {
+        if (courseCode == courseCode) {
+return true;
+        } else {
+            //TODO implement this method
+            return false;
+        }
     }
 
     @Override
