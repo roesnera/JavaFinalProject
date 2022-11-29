@@ -45,6 +45,7 @@ public class Main
         while ( option != 6 );
     }
 
+
     private static void enrollStudentToCourse( StudentService studentService, CourseService courseService,
                                                Scanner scanner )
     {

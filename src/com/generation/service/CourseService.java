@@ -4,10 +4,7 @@ import com.generation.model.Course;
 import com.generation.model.Module;
 import com.generation.model.Student;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class CourseService
 {
@@ -63,7 +60,8 @@ public class CourseService
         enrolledStudents.get( courseId ).add( student );
     }
 
-    public void showEnrolledStudents( String courseId )
+
+    public void showEnrolledStudents(String courseId)
     {
         if ( enrolledStudents.containsKey( courseId ) )
         {
@@ -75,7 +73,6 @@ public class CourseService
         }
     }
 
-
     public void showSummary()
     {
         System.out.println( "Available Courses:" );
@@ -84,15 +81,16 @@ public class CourseService
             Course course = courses.get( key );
             System.out.println( course );
         }
-        System.out.println( "Enrolled Students" );
         for ( String key : enrolledStudents.keySet() )
         {
             List<Student> students = enrolledStudents.get( key );
             System.out.println( "Students on Course " + key + ": " );
             for ( Student student : students )
             {
-                System.out.println( student );
+                System.out.println(student);
             }
         }
     }
+
 }
+

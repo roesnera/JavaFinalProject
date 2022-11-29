@@ -12,7 +12,7 @@ abstract public class Person
 
     private final Date birthDate;
 
-    protected Person( String id, String name, String email, Date birthDate )
+    protected Person(String id, String name, String email, Date birthDate )
     {
         this.id = id;
         this.name = name;
