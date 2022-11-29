@@ -28,9 +28,9 @@ public class StudentService
     {
         //TODO implement
         System.out.println("Current Students: ");
-        for(String x : students.keySet()){
-            Student student = students.get(x);
-            System.out.println(student);
+        for(Student s: students.values()){
+           // Student student = students.get(key);
+            System.out.println(s.toString());
         }
 
     }
