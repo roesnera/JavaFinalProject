@@ -69,7 +69,6 @@ public class Main
         courseService.enrollStudent( courseId, student );
         studentService.enrollToCourse( studentId, course );
         System.out.println( "Student with ID: " + studentId + " enrolled successfully to " + courseId );
-
     }
 
     private static void showCoursesSummary( CourseService courseService, Scanner scanner )
