@@ -24,8 +24,10 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+//not understanding how to write this
+        .put( course.getCode(), course );
     }
-
+//
     public void registerApprovedCourse( Course course )
     {
         approvedCourses.put( course.getCode(), course );
@@ -33,9 +35,19 @@ public class Student
 
 
     public boolean isAttendingCourse( String courseCode )
+            //return true if course code corresponds to a course in
+            //--course.java
+            //need a loop??
+            //not understanding how to write this
     {
+
         //TODO implement this method
-        return false;
+        if ( students.containsKey( courseId ) )
+        {
+            students.put( courseId, new ArrayList<>() );
+        }
+        students.get( courseId ).add( student );
+       return false;
     }
 
     @Override

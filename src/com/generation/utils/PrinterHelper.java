@@ -40,6 +40,9 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "mm/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
+        //need catch statement to handle the error -- prompt the user to re-enter the info
+        //can write some code to handle proper date range -- not required
+        //Is this where this goes???
         Date birthDate = formatter.parse( scanner.next());
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
