@@ -42,6 +42,7 @@ public class CourseService
 
     public void registerCourse( Course course )
     {
+
         courses.put( course.getCode(), course );
     }
 
@@ -54,13 +55,36 @@ public class CourseService
         return null;
     }
 
-    public void enrollStudent( String courseId, Student student )
+//Method added to check if the course is enrolled for the student
+    public boolean isAttendingCourse( String courseCode, String StudentId )
     {
-        if ( !enrolledStudents.containsKey( courseId ) )
-        {
-            enrolledStudents.put( courseId, new ArrayList<>() );
+        List<Student> students = enrolledStudents.get( courseCode );
+        if(students != null){
+            for ( Student student : students )
+            {
+                if(student.getId() == StudentId) {
+                  System.out.println( "ERROR--> The course '" + courseCode + "' is enrolled for the student " + student.getName()+".");
+                  return true;
+                }
+            }
         }
-        enrolledStudents.get( courseId ).add( student );
+
+        System.out.println( "Student with ID: " + StudentId + " enrolled successfully to " + courseCode );
+        return false;
+
+
+    }
+
+
+    public void enrollStudent( String courseId, Student student )
+    {   if( !isAttendingCourse(courseId,student.getId())){
+
+                if ( !enrolledStudents.containsKey( courseId ))
+                {
+                    enrolledStudents.put( courseId, new ArrayList<>() );
+                }
+                     enrolledStudents.get( courseId ).add( student );
+           }
     }
 
     public void showEnrolledStudents( String courseId )
