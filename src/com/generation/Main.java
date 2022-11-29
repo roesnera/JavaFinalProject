@@ -18,28 +18,17 @@ public class Main
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
         Scanner scanner = new Scanner( System.in );
-        int option = 0;
+        @SuppressWarnings("ReassignedVariable") int option = 0;
         do
         {
             PrinterHelper.showMainMenu();
             option = scanner.nextInt();
-            switch ( option )
-            {
-                case 1:
-                    registerStudent( studentService, scanner );
-                    break;
-                case 2:
-                    findStudent( studentService, scanner );
-                    break;
-                case 3:
-                    enrollStudentToCourse( studentService, courseService, scanner );
-                    break;
-                case 4:
-                    showStudentsSummary( studentService, scanner );
-                    break;
-                case 5:
-                    showCoursesSummary( courseService, scanner );
-                    break;
+            switch (option) {
+                case 1 -> registerStudent(studentService, scanner);
+                case 2 -> findStudent(studentService, scanner);
+                case 3 -> enrollStudentToCourse(studentService, courseService, scanner);
+                case 4 -> showStudentsSummary(studentService, scanner);
+                case 5 -> showCoursesSummary(courseService, scanner);
             }
         }
         while ( option != 6 );
