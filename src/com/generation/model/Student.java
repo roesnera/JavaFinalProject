@@ -21,11 +21,14 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
-    {
+    public void enrollToCourse( Course course ) {
         //TODO implement this method
+        if (!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        } else {
+            System.out.println("Student already enrolled in course");
+        }
     }
-
     public void registerApprovedCourse( Course course )
     {
         approvedCourses.put( course.getCode(), course );
@@ -35,7 +38,12 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
-        return false;
+        for(Course course : courses){
+            if(course.getCode().equals(courseCode)){
+                return true;
+            }
+        }
+        return true;
     }
 
     @Override
