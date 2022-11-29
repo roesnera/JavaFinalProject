@@ -8,47 +8,45 @@ import java.util.Map;
 
 public class Student
     extends Person
-    implements Evaluation
-{
+    implements Evaluation {
     private double average;
 
     private final List<Course> courses = new ArrayList<>();
 
     private final Map<String, Course> approvedCourses = new HashMap<>();
 
-    public Student( String id, String name, String email, Date birthDate )
-    {
-        super( id, name, email, birthDate );
+    public Student(String id, String name, String email, Date birthDate) {
+        super(id, name, email, birthDate);
     }
 
-    public void enrollToCourse( Course course )
-    {
+    public void enrollToCourse(Course course) {
         //TODO implement this method
 //not understanding how to write this
-        .put( course.getCode(), course );
+        {
+            if (!isAttendingCourse(course.getCode())) {
+                courses.add(course);
+            }
+        }
     }
-//
-    public void registerApprovedCourse( Course course )
-    {
-        approvedCourses.put( course.getCode(), course );
+
+    public void registerApprovedCourse(Course course) {
+        approvedCourses.put(course.getCode(), course);
     }
 
 
-    public boolean isAttendingCourse( String courseCode )
-            //return true if course code corresponds to a course in
-            //--course.java
-            //need a loop??
-            //not understanding how to write this
+    public boolean isAttendingCourse(String courseCode)
+    //return true if course code corresponds to a course in
+    //--course.java
+    //need a loop??
+    //not understanding how to write this
     {
 
         //TODO implement this method
-        if ( students.containsKey( courseId ) )
-        {
-            students.put( courseId, new ArrayList<>() );
-        }
-        students.get( courseId ).add( student );
-       return false;
+
+        return false;
     }
+
+
 
     @Override
     public double getAverage()
