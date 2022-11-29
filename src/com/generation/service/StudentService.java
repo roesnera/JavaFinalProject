@@ -4,6 +4,8 @@ import com.generation.model.Course;
 import com.generation.model.Student;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
@@ -26,7 +28,14 @@ public class StudentService
 
     public void showSummary()
     {
-        //TODO implement
+
+        System.out.println( " Students" );
+
+        Iterator<Map.Entry<String, Student>> itr = students.entrySet().iterator();
+        while (itr.hasNext()) {
+            System.out.println(itr.next());
+        }
+
     }
 
     public void enrollToCourse( String studentId, Course course )
