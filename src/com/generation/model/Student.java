@@ -24,7 +24,9 @@ public class Student
     public void enrollToCourse(Course course)
     {
         //TODO implement this method
-        Course.add
+        for (Course enroll: courses) {
+            System.out.println(course);
+        }
     }
 
     public void registerApprovedCourse( Course course )
