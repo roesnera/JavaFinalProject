@@ -1,5 +1,7 @@
 package com.generation.model;
 
+import java.util.Objects;
+
 public class Course
 {
     private final String code;
@@ -45,4 +47,5 @@ public class Course
         return "Course{" + "code='" + code + '\'' + ", name='" + name + '\'' + ", credits=" + credits + ", module="
             + module + '}';
     }
+
 }

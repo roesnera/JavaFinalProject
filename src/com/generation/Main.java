@@ -68,7 +68,8 @@ public class Main
         System.out.println( course );
         courseService.enrollStudent( courseId, student );
         studentService.enrollToCourse( studentId, course );
-        System.out.println( "Student with ID: " + studentId + " enrolled successfully to " + courseId );
+
+        //System.out.println( "Student with ID: " + studentId + " enrolled successfully to " + courseId );
 
     }
 
@@ -91,6 +92,7 @@ public class Main
         {
             System.out.println( "Student Found: " );
             System.out.println( student );
+
         }
         else
         {
