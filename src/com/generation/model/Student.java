@@ -21,7 +21,6 @@ public class Student
 
     public void enrollToCourse(Course course) {
         //TODO implement this method
-//not understanding how to write this
         {
             if (!isAttendingCourse(course.getCode())) {
                 courses.add(course);
@@ -37,16 +36,16 @@ public class Student
     public boolean isAttendingCourse(String courseCode)
     //return true if course code corresponds to a course in
     //--course.java
-    //need a loop??
-    //not understanding how to write this
+    //need a loop?? enhanced for loop
+
     {
-
         //TODO implement this method
-
-        return false;
+for(Course content : courses){
+    if(content.getCode().equals(courseCode)) {
+        return true;
     }
-
-
+}        return false;
+    }
 
     @Override
     public double getAverage()

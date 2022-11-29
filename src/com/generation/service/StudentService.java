@@ -31,7 +31,6 @@ public class StudentService
             //needs to do the same thing as the courseService class -- EXAMPLE BELOW
 //show summary of enrolled students
     //................................................
-//Yay!! 9:16pm - small piece figured out!
     {
         System.out.println("Student Roster:");
         for (String key : students.keySet()) {
@@ -51,11 +50,6 @@ public class StudentService
 //                }
             }
 // .................................................
-
-
-
-
-
     public void enrollToCourse( String studentId, Course course )
     {
         if ( students.containsKey( studentId ) )
