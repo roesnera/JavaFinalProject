@@ -13,7 +13,7 @@ public class StudentService
     private final Map<String, Student> students = new HashMap<>();
 
     //Keep track of the courses that each student registered.
-    private final Map<String, List<Course>> enrolledStudents = new HashMap<>();
+    private final Map<String, ArrayList<Course>> enrolledStudents = new HashMap<>();
 
     public void subscribeStudent( Student student )
     {
@@ -22,7 +22,7 @@ public class StudentService
 
     public Student findStudent( String studentId )
     {
-        if ( students.containsKey( studentId ) )
+        if ( students.containsKey( studentId ))
         {
             return students.get( studentId );
         }
@@ -53,11 +53,27 @@ public class StudentService
     //Keeping track of the course for the student
     public void addEnrollStudents(String studentId, Course course) {
 
-        if ( !enrolledStudents.containsKey( studentId ) )
+
+        if ( (enrolledStudents.containsKey( studentId ) ))
         {
-            enrolledStudents.put( studentId, new ArrayList<>() );
+            ArrayList<Course> courseList =  enrolledStudents.get(studentId);
+            System.out.println("CourseList" + courseList);
+
+            //For avoiding ConcurrentModificationException,used for loop
+            boolean flag = false;
+           for(int i = 0; i < courseList.size();  i++) {
+                if (courseList.get(i).getCode().equals(course.getCode())) {
+                    flag = true;
+                }
+            }
+           if(!(flag)) {
+               enrolledStudents.get(studentId).add( course );
+           }
         }
-        enrolledStudents.get(studentId).add( course );
+        else {
+            enrolledStudents.put( studentId, new ArrayList<>() );
+            enrolledStudents.get(studentId).add( course );
+        }
 
     }
 

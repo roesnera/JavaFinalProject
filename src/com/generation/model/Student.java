@@ -25,7 +25,17 @@ public class Student
     public void enrollToCourse(Course course )
     {
         //TODO implement this method
-        registerApprovedCourse(course);
+        if(!(isAttendingCourse(course.getCode()))) {
+            //Initially I did correctly. I overthought add all registered courses to approvedCourses.
+            //Modified back again
+            courses.add(course);
+
+            //Used for isAttendingCourse
+            registerApprovedCourse(course);
+        }
+        else {
+            System.out.println("The student has been enrolled");
+        }
     }
 
     public void registerApprovedCourse( Course course )
