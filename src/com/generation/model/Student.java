@@ -56,6 +56,6 @@ public class Student
     @Override
     public String toString()
     {
-        return "Student {" + super.toString() + "}";
+        return "Student {" + super.toString() + "}" + this.courses;
     }
 }
