@@ -10,6 +10,7 @@ public class Student
     extends Person
     implements Evaluation
 {
+
     private double average;
 
     private final List<Course> courses = new ArrayList<>();
@@ -21,9 +22,16 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
+    public void enrollToCourse(Course course)
     {
         //TODO implement this method
+        //implemented if statement after class demo
+        if(!isAttendingCourse(course.getCode())){
+            courses.add(course);
+            System.out.println("Student has successful been enrolled");
+        } else {
+            System.out.println("Student is already enrolled");
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -32,9 +40,21 @@ public class Student
     }
 
 
-    public boolean isAttendingCourse( String courseCode )
+    public boolean isAttendingCourse(String courseCode)
     {
+//        for(Course course: courses) {
+//            if(course.getCode().equals(courseCode) {
+//            return true;
+//            }
+//        }
+//        return false;
+
         //TODO implement this method
+        for(int i = 0; i < courses.size(); i++) {
+            if(courses.get(i).getCode() == courseCode) {
+            return true;
+            }
+        }
         return false;
     }
 
@@ -49,4 +69,5 @@ public class Student
     {
         return "Student {" + super.toString() + "}";
     }
+
 }

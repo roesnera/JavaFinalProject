@@ -6,7 +6,10 @@ import com.generation.service.CourseService;
 import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -17,16 +20,16 @@ public class Main
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
-        Scanner scanner = new Scanner( System.in );
+        Scanner scanner = new Scanner(System.in);
         int option = 0;
         do
         {
             PrinterHelper.showMainMenu();
             option = scanner.nextInt();
-            switch ( option )
+            switch(option)
             {
                 case 1:
-                    registerStudent( studentService, scanner );
+                    registerStudent(studentService, scanner);
                     break;
                 case 2:
                     findStudent( studentService, scanner );

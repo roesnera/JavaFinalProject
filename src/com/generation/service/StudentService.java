@@ -27,13 +27,19 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        System.out.println("Student Summary: ");
+        // Answer based on class demo
+        for(Student summary: students.values()) {
+            Student student = students.get(summary);
+            System.out.println(summary.toString());
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )
     {
         if ( students.containsKey( studentId ) )
         {
-            students.get( studentId ).enrollToCourse( course );
+            students.get(studentId).enrollToCourse( course );
         }
     }
 
