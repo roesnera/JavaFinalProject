@@ -24,6 +24,8 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        courses.add(course);
+
     }
 
     public void registerApprovedCourse( Course course )
