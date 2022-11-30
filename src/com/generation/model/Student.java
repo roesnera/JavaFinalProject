@@ -25,7 +25,14 @@ public class Student
     {
         //TODO implement this method
 
-        courses.add(course);
+        //COME BACK TO THIS
+
+        if (!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        } else {
+            System.out.println("Already enrolled");
+        }
+
     }
 
     public void registerApprovedCourse( Course course )
