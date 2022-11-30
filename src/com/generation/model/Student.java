@@ -23,7 +23,7 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO implement this method
+        courses.add(course);
     }
 
     public void registerApprovedCourse( Course course )
@@ -33,13 +33,26 @@ public class Student
 
 
     public boolean isAttendingCourse( String courseCode )
-    {
-        //TODO implement this method
+    {   //TODO implement this method
+        //iterate Course object from arrayList of courses
+        //arrayList(courses) for each method
+
+        for(Course course:courses) {
+            //in the arrayList use getCode method
+            //to check if it matches with the user's input(courseCode) use .equals
+            if (course.getCode().equals(courseCode)) {
+                //if it equals return true
+                return true;
+            } else {
+                //if not equals return false
+                return false;
+            }
+        }
         return false;
+
     }
 
-    @Override
-    public double getAverage()
+        public double getAverage()
     {
         return average;
     }
