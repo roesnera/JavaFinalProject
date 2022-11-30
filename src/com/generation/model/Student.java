@@ -23,6 +23,12 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
+        if(!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        }
+        else{
+            System.out.println("You are already enrolled in this course.");
+        }
         //TODO implement this method
     }
 
@@ -31,9 +37,14 @@ public class Student
         approvedCourses.put( course.getCode(), course );
     }
 
-
+// Will return true is the student is attending the course that correlates with the courseCode argument
     public boolean isAttendingCourse( String courseCode )
     {
+        for(Course course: courses){
+            if(course.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         //TODO implement this method
         return false;
     }
