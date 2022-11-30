@@ -37,6 +37,11 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        for(Course c : courses){
+            if(c.getCode().equalsIgnoreCase(courseCode)){
+                return true;
+            }
+        }
         return false;
     }
 
