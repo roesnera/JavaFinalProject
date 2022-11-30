@@ -7,6 +7,7 @@ import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -104,4 +105,10 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+
+    Student myStudent = new Student("1", "Jane Dow", "again@email.com", new java.util.Date("1995-1-1"));
+    StudentService myStudentService = new StudentService();
+
+
+
 }
