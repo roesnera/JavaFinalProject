@@ -24,6 +24,12 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        //to add courses to the list Course
+        if(!isAttendingCourse(course.getCode())) {
+        this.courses.add(course); }
+        else {
+            System.out.println("The Student is already enrolled in the course.");
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -32,11 +38,22 @@ public class Student
     }
 
 
-    public boolean isAttendingCourse( String courseCode )
-    {
+    public boolean isAttendingCourse( String courseCode ) {
+
         //TODO implement this method
+
+        for (Course course : courses) {
+            if (course.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         return false;
     }
+
+        //return true if the courseCode correspond to any course on the List,
+        // go to the Course class, use the loop, if it matches - return true;
+
+
 
     @Override
     public double getAverage()
