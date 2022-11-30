@@ -1,14 +1,12 @@
 package com.generation.model;
-
 import java.util.*;
-
 public class Student
     extends Person
     implements Evaluation
 {
     private double average;
-
-    private final List<Course> courses = new ArrayList<>();
+    // an array list that holds the objects of Course named:courses
+     private final List<Course> courses = new ArrayList<>();
     //temp holds the courses each student is enrolled
     public final List<String> temp = new ArrayList<>();
 
