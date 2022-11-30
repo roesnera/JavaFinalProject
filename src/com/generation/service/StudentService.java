@@ -26,9 +26,17 @@ public class StudentService
 
     public void showSummary()
     {
-        //TODO implement
+        // implement students values to showSummary
+        System.out.println( "Students: ");
+        for (Student student : students.values())
+        {
+            System.out.println(student.toString());
+
+        }
     }
 
+
+        // implement students id into enrollToCourse
     public void enrollToCourse( String studentId, Course course )
     {
         if ( students.containsKey( studentId ) )

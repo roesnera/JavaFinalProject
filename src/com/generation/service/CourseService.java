@@ -49,6 +49,7 @@ public class CourseService
     {
         if ( courses.containsKey( code ) )
         {
+            // input course code
             return courses.get( code );
         }
         return null;
