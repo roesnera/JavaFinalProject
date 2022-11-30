@@ -6,6 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+
+//***** Full disclosure I was only able to complete this after going over this as a class.
+// I will not attempt to pass this work off as my own. However, my independent solutions were not producing the desired output.
+
+
 public class Student
     extends Person
     implements Evaluation
@@ -23,6 +28,14 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
+
+        if(!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        }
+        else{
+            System.out.println("This student is already enrolled in this course.");
+        }
+
         //TODO implement this method
     }
 
@@ -34,6 +47,11 @@ public class Student
 
     public boolean isAttendingCourse( String courseCode )
     {
+        for (Course c: courses) {
+            if (c.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         //TODO implement this method
         return false;
     }
