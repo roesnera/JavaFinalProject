@@ -27,7 +27,17 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+
+        System.out.println( "Registered Students:" );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            System.out.println( student.toString() );
+        }
+
     }
+
+
 
     public void enrollToCourse( String studentId, Course course )
     {
