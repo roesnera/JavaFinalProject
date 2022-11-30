@@ -4,6 +4,7 @@ import com.generation.model.Course;
 import com.generation.model.Student;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
@@ -26,7 +27,18 @@ public class StudentService
 
     public void showSummary()
     {
-        //TODO implement
+        System.out.println( "Total Students:" );
+        //loop through the students hashmap using mapName.keySet()
+        //for each key in the student...
+        for ( String key : students.keySet() ) {
+          // save each key (element) in the hashMap into a student obj
+            Student student = students.get( key );
+            String temp = student.getTemp().toString();
+            //print out each student until there's no more keys
+            //temp is the courses each student is enrolled into
+            System.out.println( student + temp);
+
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )

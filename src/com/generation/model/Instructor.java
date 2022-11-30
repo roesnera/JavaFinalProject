@@ -12,7 +12,7 @@ public class Instructor
 
     private final List<Course> teachingCourses = new ArrayList<>();
 
-    protected Instructor( String id, String name, String email, Date birthDate )
+    protected Instructor(String id, String name, String email, Date birthDate )
     {
         super( id, name, email, birthDate );
     }
