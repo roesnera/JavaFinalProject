@@ -24,6 +24,8 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        // add course to courses list
+        courses.add(course);
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,6 +37,12 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        // check to see if the course code corresponds to any entry in the courses list
+        for(int i = 0; i < courses.size(); i++) {
+            if(courseCode.equals(courses.get(i))) {
+                return true;
+            }
+        }
         return false;
     }
 
@@ -47,6 +55,6 @@ public class Student
     @Override
     public String toString()
     {
-        return "Student {" + super.toString() + "}";
+        return "Student {" + super.toString() + " " + courses.toString() + "}";
     }
 }

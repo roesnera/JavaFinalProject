@@ -4,6 +4,7 @@ import com.generation.model.Course;
 import com.generation.model.Student;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class StudentService
@@ -27,6 +28,13 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        // implement showSummary by using showSummary method in CourseService class as a basis to what the output should look like
+
+        System.out.println("Registered Students:");
+        for (Student student : students.values() ) {
+            System.out.println(student.toString());
+        }
+
     }
 
     public void enrollToCourse( String studentId, Course course )
