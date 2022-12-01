@@ -1,7 +1,7 @@
 package com.generation.model;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +16,7 @@ public class Student
 
     private final Map<String, Course> approvedCourses = new HashMap<>();
 
-    public Student( String id, String name, String email, Date birthDate )
+    public Student(String id, String name, String email, Date birthDate )
     {
         super( id, name, email, birthDate );
     }
@@ -24,6 +24,11 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        if(!isAttendingCourse(course.getCode())) {
+            courses.add(course);
+        } else {
+            System.out.println("Student already enrolled.");
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,6 +40,11 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        for(Course _course : courses) {
+            if(_course.getCode().equals(courseCode)) {
+                return true;
+            }
+        }
         return false;
     }
 

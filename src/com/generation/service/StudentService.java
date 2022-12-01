@@ -27,6 +27,10 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        System.out.println("Students: ");
+        for(Student _student : students.values()){
+            System.out.println(_student.toString());
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )
