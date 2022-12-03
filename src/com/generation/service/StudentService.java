@@ -28,10 +28,8 @@ public class StudentService
     {
         //TODO implement
         System.out.println("Student Summary");
-        for (String s : students.keySet()){
-            Student student =students.get(s);
-
-            System.out.println(student.toString());
+        for (Student s : students.values()){
+            System.out.println(s.toString());
         }
 
     }
