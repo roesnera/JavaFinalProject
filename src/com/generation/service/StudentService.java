@@ -12,6 +12,7 @@ public class StudentService
 
     public void subscribeStudent( Student student )
     {
+
         students.put( student.getId(), student );
     }
 
@@ -27,6 +28,23 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        System.out.println( "Students:" );
+        for ( String key : students.keySet() )
+        {
+            Student student = students.get( key );
+            String studentStr = student.toString();
+            String newStr = new String();
+            String courseStr = student.getCourses().toString();
+            for(int i = 0; i < studentStr.length(); i++) {
+                newStr += studentStr.charAt(i);
+                if(i == studentStr.length() - 2) {
+                    newStr += ", " + courseStr;
+                }
+
+            }
+            System.out.println(newStr);
+        }
+
     }
 
     public void enrollToCourse( String studentId, Course course )
