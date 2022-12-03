@@ -25,9 +25,12 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        /*
+        To check if is already enroll to this course by getting the index of the course from the arrayList
+        will return -1 if not found. If not found then add the course to the list
+         */
         if(courses.indexOf(course) == -1) {
             courses.add(course);
-            System.out.println(courses);
         }
         else {
             System.out.println("Course is already enrolled!");
