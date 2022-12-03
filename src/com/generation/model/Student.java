@@ -23,8 +23,12 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO implement this method
-        courses.add(course);
+        if(!isAttendingCourse(course.getCode())){
+            //TODO implement this method
+            courses.add(course);
+        } else {
+            System.out.println("Student has already been enrolled in this course");
+        }
 
     }
 
