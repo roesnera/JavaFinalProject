@@ -3,6 +3,7 @@ package com.generation.service;
 import com.generation.model.Course;
 import com.generation.model.Student;
 
+import java.security.Key;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +27,10 @@ public class StudentService
 
     public void showSummary()
     {
+        System.out.println("student: ");
+        for(Student stu: students.values()) {
+            System.out.println(stu.toString());
+        }
         //TODO implement
     }
 
