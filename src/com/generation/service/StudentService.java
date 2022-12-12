@@ -24,8 +24,13 @@ public class StudentService
         return null;
     }
 
-    public void showSummary()
+    public void showSummary(String key)
     {
+        System.out.println("Students: ");
+        for (Student s: students.values()) {
+                Student stud = students.get(key);
+            System.out.println(s.toString());
+        }
         //TODO implement
     }
 
@@ -39,3 +44,21 @@ public class StudentService
 
 
 }
+
+
+
+//  System.out.println( "Available Courses:" );
+//          for ( String key : courses.keySet() )
+//          {
+//          Course course = courses.get( key );
+//          System.out.println( course );
+//          }
+//          System.out.println( "Enrolled Students" );
+//          for ( String key : enrolledStudents.keySet() )
+//          {
+//          List<Student> students = enrolledStudents.get( key );
+//        System.out.println( "Students on Course " + key + ": " );
+//        for ( Student student : students )
+//        {
+//        System.out.println( student );
+//        }
