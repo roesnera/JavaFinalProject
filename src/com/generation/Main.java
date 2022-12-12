@@ -79,7 +79,8 @@ public class Main
 
     private static void showStudentsSummary( StudentService studentService, Scanner scanner )
     {
-        studentService.showSummary();
+        String key = null;
+        studentService.showSummary(key);
     }
 
     private static void findStudent( StudentService studentService, Scanner scanner )
