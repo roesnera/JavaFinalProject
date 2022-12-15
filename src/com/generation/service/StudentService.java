@@ -2,6 +2,7 @@ package com.generation.service;
 
 import com.generation.model.Course;
 import com.generation.model.Student;
+import java.util.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,7 +27,9 @@ public class StudentService
 
     public void showSummary()
     {
-        //TODO implement
+       for(Student student : students.values()) {
+           System.out.println(student);
+       }
     }
 
     public void enrollToCourse( String studentId, Course course )
