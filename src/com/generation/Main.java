@@ -6,7 +6,9 @@ import com.generation.service.CourseService;
 import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
+import java.text.DateFormat;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -17,6 +19,7 @@ public class Main
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
+        Student s = new Student("100142436","Maliha Khan","khanmaliha76@gmail.com",new Date(1996,07,02));
         Scanner scanner = new Scanner( System.in );
         int option = 0;
         do
@@ -99,9 +102,13 @@ public class Main
     }
 
     private static void registerStudent( StudentService studentService, Scanner scanner )
-        throws ParseException
-    {
-        Student student = PrinterHelper.createStudentMenu( scanner );
+        throws ParseException{
+
+
+
+
+            Student student = PrinterHelper.createStudentMenu( scanner );
+
         studentService.subscribeStudent( student );
     }
 }
