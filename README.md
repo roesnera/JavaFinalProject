@@ -14,6 +14,7 @@
  * Classes
  * Functionality
  3. Run and test the project to get a deeper understanding of how it works (remember the persistence mindset!).
+ 4. You will be working on the <strong>StudentService</strong> class, the <strong>Student</strong> class, the <strong>PrinterHelper</strong> class, and the <strong>Main</strong> class.
  
   ## Part 2: Implementing the Student and StudentService missing features
   1. Open the *Student* class (`src/com/generation/model/Student.java`) and implement the following methods:
@@ -43,7 +44,7 @@
    
    Hint: To show the summary use `System.out.println()` to print out to the console.
 
-  ## Part 3: Implementing the missing main method features
+  ## Part 3: Trying out your new functionality in the main method
  
  
  1. Test the program to verify it works as expected:
@@ -54,15 +55,10 @@
 
   ## Part 4: Handling exceptions
   1. Register a new user providing a wrong date format.
-  2. Modify the createStudentMenu so that it handles correctly the exception when a wrong date format is inserted by the user.
+  2. Modify the createStudentMenu method of the PrinterHelper class so that it handles correctly the exception when a wrong date format is inserted by the user.
   3. Catch the exception and show a proper message to the user.
   
- ## Part 5: Writing Unit Tests
+ ## Challenge Yourself
  1. Write 2 Unit tests for the class *StudentService*
  2. Write 2 Unit tests for the class *CourseService*
-  
-  
-  ## Challenge Yourself
-  1. Implement a way to store grades for each course a student is taking. There should be a way to update/set the score.
-  Afterwards, fill in the `public List<Course> findPassedCourses( Course course )` method in Student.java
-  2. Implement an additional feature in the menu options that will display the average grade of all the students suscribed to a given course.
+ 3. Remember that this will involve setting up your testing environment! (Refer to instructions shared in the student slack channel if you need them)
