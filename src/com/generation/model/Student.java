@@ -1,5 +1,6 @@
 package com.generation.model;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -24,6 +25,16 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        /*
+        To check if is already enroll to this course by getting the index of the course from the arrayList
+        will return -1 if not found. If not found then add the course to the list
+         */
+        if(courses.indexOf(course) == -1) {
+            courses.add(course);
+        }
+        else {
+            System.out.println("Course is already enrolled!");
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,7 +46,14 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+        if(courses.indexOf(courseCode) != -1){
+            return true;
+        }
         return false;
+    }
+
+    public List<Course> getCourses() {
+        return courses;
     }
 
     @Override

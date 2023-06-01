@@ -7,6 +7,7 @@ import com.generation.service.StudentService;
 import com.generation.utils.PrinterHelper;
 
 import java.text.ParseException;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main
@@ -17,6 +18,12 @@ public class Main
     {
         StudentService studentService = new StudentService();
         CourseService courseService = new CourseService();
+        Student student1 = new Student("1", "Yuhuan", "yuhuan@gmail.com", new Date("02/01/1995"));
+        studentService.subscribeStudent(student1);
+        courseService.enrollStudent("INTRO-CS-1", student1);
+        courseService.enrollStudent("INTRO-CS-2", student1);
+        studentService.enrollToCourse(student1.getId(),courseService.getCourse("INTRO-CS-1"));
+        studentService.enrollToCourse(student1.getId(),courseService.getCourse("INTRO-CS-2"));
         Scanner scanner = new Scanner( System.in );
         int option = 0;
         do
@@ -104,4 +111,5 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+
 }
