@@ -21,9 +21,15 @@ public class Student
         super( id, name, email, birthDate );
     }
 
-    public void enrollToCourse( Course course )
-    {
+    public void enrollToCourse( Course course ) {
+
+        // ADD a new course into the course instance
         //TODO implement this method
+        if(course.getCode().equals(courses)) {
+            System.out.println("Course already exists");
+        } else {
+            courses.add(course);
+        }
     }
 
     public void registerApprovedCourse( Course course )
@@ -31,10 +37,14 @@ public class Student
         approvedCourses.put( course.getCode(), course );
     }
 
-
-    public boolean isAttendingCourse( String courseCode )
-    {
+//return true if student is attending class
+    public boolean isAttendingCourse( String courseCode ) {
         //TODO implement this method
+        for (Course cour : courses){
+            if (cour.getCode().equals(courseCode)) {
+                return true;
+            }
+       }
         return false;
     }
 
