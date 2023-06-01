@@ -5,6 +5,7 @@ import com.generation.model.Student;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import java.util.Scanner;
 
@@ -40,7 +41,20 @@ public class PrinterHelper
         System.out.println( "| Enter student birth date(mm/dd/yyyy)|" );
         DateFormat formatter = new SimpleDateFormat( "MM/dd/yyyy");
         //TODO validate date format and catch exception to avoid crash
-        Date birthDate = formatter.parse( scanner.next());
+        Date birthDate=null;
+        boolean validDate=false;
+
+        while(!validDate){
+        try{
+            birthDate = formatter.parse( scanner.next());
+            validDate=true;
+        } catch(ParseException error){
+            System.out.println("invalid date. Please enter a valid date");
+        }
+        }
+
+
+
         System.out.println( "|-------------------------------------|" );
         Student student = new Student( id, name, email, birthDate );
         System.out.println( "Student Successfully Registered! " );

@@ -43,6 +43,7 @@ public class Main
             }
         }
         while ( option != 6 );
+
     }
 
     private static void enrollStudentToCourse( StudentService studentService, CourseService courseService,
@@ -104,4 +105,8 @@ public class Main
         Student student = PrinterHelper.createStudentMenu( scanner );
         studentService.subscribeStudent( student );
     }
+
+
+
+
 }

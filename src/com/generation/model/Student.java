@@ -24,6 +24,7 @@ public class Student
     public void enrollToCourse( Course course )
     {
         //TODO implement this method
+        courses.add(course); //adds a new course to end of course arraylist
     }
 
     public void registerApprovedCourse( Course course )
@@ -35,6 +36,13 @@ public class Student
     public boolean isAttendingCourse( String courseCode )
     {
         //TODO implement this method
+
+            for (Course course : courses) {
+                if (courseCode.equalsIgnoreCase(course.getCode())) {
+                    return true;
+                }
+            }
+
         return false;
     }
 
