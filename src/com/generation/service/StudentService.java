@@ -26,6 +26,11 @@ public class StudentService
 
     public void showSummary()
     {
+        System.out.println("Students: ");
+        for(Student s: students.values()) {
+//            Student stud = students.get(key);
+            System.out.println(s.toString());
+        }
         //TODO implement
     }
 
