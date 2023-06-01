@@ -27,6 +27,11 @@ public class StudentService
     public void showSummary()
     {
         //TODO implement
+        System.out.println( "Student Summary" );
+        for (String key : students.keySet()) {
+            Student student = students.get(key);
+            System.out.println(student);
+        }
     }
 
     public void enrollToCourse( String studentId, Course course )
@@ -36,6 +41,5 @@ public class StudentService
             students.get( studentId ).enrollToCourse( course );
         }
     }
-
 
 }
